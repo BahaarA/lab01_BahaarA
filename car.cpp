@@ -30,12 +30,10 @@ Car::Car(const Car& o) {
 }//constr\uctor not same as default constructor
 
 Car::~Car() {
-if (manufacturer != nullptr) {
     free(manufacturer);
-}
-if (model != nullptr) {
+
     free(model);
-}}//  destructor 
+}//  destructor 
 
 Car& Car::operator=(const Car& o) {
     if (this == &o) {
