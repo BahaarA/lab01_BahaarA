@@ -70,7 +70,7 @@ char const* Car::getModel() const {
     }
 
 PerformanceStats Car::getStats() const {
-    PerformanceStats perf = {zeroToSixtyNs, headonDragCoeff, horsepower};
+    PerformanceStats perf = {horsepower, zeroToSixtyNs, headonDragCoeff};
     return perf;
 
 }
