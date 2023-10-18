@@ -30,8 +30,15 @@ Car::Car(const Car& o) {
 }//constr\uctor not same as default constructor
 
 Car::~Car() {
-    delete[] manufacturer;
-    delete[] model;
+    if (manufacturer != nullptr) {
+        delete[] manufacturer;
+        manufacturer = nullptr;
+    }
+
+    if (model != nullptr) {
+        delete[] model;
+        model = nullptr;
+    }
 }//  destructor 
 
 Car& Car::operator=(const Car& o) {
