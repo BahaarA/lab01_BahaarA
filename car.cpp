@@ -31,10 +31,10 @@ Car::Car(const Car& o) {
 
 Car::~Car() {
 if (manufacturer != nullptr) {
-    delete[] manufacturer;
+    free(manufacturer);
 }
 if (model != nullptr) {
-    delete[] model;
+    free(model);
 }}//  destructor 
 
 Car& Car::operator=(const Car& o) {
